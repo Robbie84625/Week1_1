@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!--控制網頁縮放-->
+        <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+        <meta charset="utf-8"/>
+        <title>My Webside</title>
+        <link rel="stylesheet" type="text/css" href="CSS_Selectors_2.css"/>
+    </head>
+
+    <body>
+        <div  class="frame">
+            <div class="left">
+                My Webside
+            </div>
+            <div class="right">
+                <div class="item">item1</div>
+                <div class="item">item2</div>
+                <div class="item">item3</div>
+                <div class="item">item4</div>
+                <div class="icon">
+                    <img src="icon.png" class="icon_img"    onmouseover="over(this);"
+                                                            onmouseout="out(this);"
+                                                            onmousedown="down(this)"
+                                                            onmouseup="up(this)"
+                                                            onclick="FloatingMenu(this)">
+                </div>
+            </div>
+        </div>
+
+        
+        <div class="welcome">
+            Welcome To My Home
+        </div>
+
+
+        <div class="three_sheet">
+            <div class="three_img">
+                <img src="the_Love_River.jpg" id="three_img" alt="first picture"/>
+                <span>promotion1</span>
+            </div>
+            <div class="three_img">
+                <img src="the_Love_River.jpg" id="three_img" alt="first picture"/>
+                <span>promotion1</span>
+            </div>
+            <div class="three_img">
+                <img src="the_Love_River.jpg" id="three_img" alt="first picture"/>
+                <span>promotion1</span>
+            </div>
+        </div>
+
+
+        <div class="sixteen_sheet">
+            <div class="sixteen_img">
+                <img src="star.png" id="star-icon"/>
+                <img src="the_Love_River.jpg" class="img"/>
+                <div id="sixteen_img">Tittle 1</div>
+            </div>
+
+            <div class="sixteen_img">
+                <img src="star.png" id="star-icon"/>
+                <img src="the_Love_River.jpg" class="img"/>
+                <div id="sixteen_img">Tittle 1</div>
+            </div>
+
+            <div class="sixteen_img">
+                <img src="star.png" id="star-icon"/>
+                <img src="the_Love_River.jpg" class="img"/>
+                <div id="sixteen_img">Tittle 1</div>
+            </div>
+
+            <div class="sixteen_img">
+                <img src="star.png" id="star-icon"/>
+                <img src="the_Love_River.jpg" class="img"/>
+                <div id="sixteen_img">Tittle 1</div>
+            </div>
+
+            <div class="sixteen_img">
+                <img src="star.png" id="star-icon"/>
+                <img src="the_Love_River.jpg" class="img"/>
+                <div id="sixteen_img">Tittle 1</div>
+            </div>
+
+            <div class="sixteen_img">
+                <img src="star.png" id="star-icon"/>
+                <img src="the_Love_River.jpg" class="img"/>
+                <div id="sixteen_img">Tittle 1</div>
+            </div>
+
+            <div class="sixteen_img">
+                <img src="star.png" id="star-icon"/>
+                <img src="the_Love_River.jpg" class="img"/>
+                <div id="sixteen_img">Tittle 1</div>
+            </div>
+
+            <div class="sixteen_img">
+                <img src="star.png" id="star-icon"/>
+                <img src="the_Love_River.jpg" class="img"/>
+                <div id="sixteen_img">Tittle 1</div>
+            </div>
+
+            <div class="sixteen_img">
+                <img src="star.png" id="star-icon"/>
+                <img src="the_Love_River.jpg" class="img"/>
+                <div id="sixteen_img">Tittle 1</div>
+            </div>
+
+            <div class="sixteen_img">
+                <img src="star.png" id="star-icon"/>
+                <img src="the_Love_River.jpg" class="img"/>
+                <div id="sixteen_img">Tittle 1</div>
+            </div>
+            
+            <div class="sixteen_img">
+                <img src="star.png" id="star-icon"/>
+                <img src="the_Love_River.jpg" class="img"/>
+                <div id="sixteen_img">Tittle 1</div>
+            </div>
+
+            <div class="sixteen_img">
+                <img src="star.png" id="star-icon"/>
+                <img src="the_Love_River.jpg" class="img"/>
+                <div id="sixteen_img">Tittle 1</div>
+            </div>
+        </div>
+        <div class="top-right">
+            <div class="item_phone">item1</div>
+            <div class="item_phone">item2</div>
+            <div class="item_phone">item3</div>
+            <div class="item_phone">item4</div>
+        </div>
+        <script>
+            function FloatingMenu(){
+                let divElement=document.querySelector(".top-right")
+                divElement.style.display = "block";
+            }
+            function over(elem){
+                elem.style.height = '40px';
+                elem.style.width = 'auto';
+            }
+            function out(elem){
+                elem.style.height = '20px';
+                elem.style.width = 'auto';
+            }
+            function down(elem){
+                elem.style.height = '20px';
+                elem.style.width = 'auto';
+            }
+            function up(elem){
+                elem.style.height = '40px';
+                elem.style.width = 'auto';
+            }
+            function up(elem){
+                elem.style.height = '40px';
+                elem.style.width = 'auto';
+            }
+            document.addEventListener('click', function(event) {
+                let targetElement = event.target;
+                let topRightElement = document.querySelector(".top-right");
+
+                if (targetElement !== topRightElement && !topRightElement.contains(targetElement)&& !targetElement.classList.contains("icon_img")) {
+                topRightElement.style.display = "none";
+                }
+                });
+            
+        </script>
+    </body>
+</html>
+

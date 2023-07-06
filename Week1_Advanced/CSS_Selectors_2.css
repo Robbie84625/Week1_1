@@ -1,0 +1,121 @@
+body
+{
+    padding: 0px; margin: 0px;
+}
+.frame
+{
+    display: flex;/*讓下一層次項目水平排列*/
+}
+.left
+{
+    flex:none;/*固定配置，參考寬度*/ font-weight: 20px; justify-content:flex-start; padding: 10px; display: flex; align-items: center; text-align: center;
+}
+.right
+{
+    display: flex;/*讓下一層次項目水平排列*/ flex:auto; justify-content: flex-end; padding: 10px;
+}
+.item
+{
+    font-weight: 20px; margin-right: 10px; text-align: center; align-items: center;
+}
+.icon{
+    display: none; align-items: center;
+}
+.icon_img{
+    height: 20px; width:auto
+}
+.welcome
+{
+    padding: 0px; border: 0px; height: 250px; background-color: #ADD8E6; font-size: 2em;
+    
+    /*完美置中*/
+    display: flex; justify-content: center; align-items: center;
+}
+.three_sheet
+{
+    margin-top: 20px;
+    display: flex; flex-wrap: wrap; width: 1200px; margin-left: auto; margin-right: auto;
+    display: grid; grid-gap: 20px; /* 列之間的距離 */grid-template-columns: 1fr 1fr 1fr;
+    padding: 0%;
+}
+.three_img
+{
+    background-color:  #ADD8E6;display: flex; align-items: center;  
+}
+.sixteen_sheet
+{
+    display: flex; flex-wrap: wrap; width: 1200px; margin-left: auto; margin-right: auto;margin-top: 20px;
+    display: grid; grid-gap: 20px; /* 列之間的距離 */grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+
+#three_img
+{
+    width:80px; height: 50px; margin-right: 20px;
+}
+.sixteen_img{ 
+    width: 100%; height: auto;
+    display: flex; justify-content: center; align-items: end;
+    position: relative;
+}
+
+#sixteen_img{
+    width: 100%; background-color: rgba(173, 216, 230, 0.5);text-align: center;
+    text-align: center; font-weight: 20px; padding-top: 10px;padding-bottom: 10px;
+    position: absolute;nav-down:0%;left: 0%; width: 100%;
+}
+#star-icon{
+    width: 20px; height: 20px;
+    position: absolute;top: 0; right: 0;
+}
+
+#text{
+    text-align: center; font-weight: 20px; padding: 10px;
+}
+.img{
+    width: 100%;height:auto;object-fit: cover;
+}
+.top-right
+{
+    background-color: white;
+    position: absolute; top: 0; right: 0;
+    display: none;
+    height: 100vh;
+    width:50vw;
+    border-left: 1px solid #000;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+.item_phone
+{
+    font-weight: 20px;width: 100%; text-align: center; align-items: center;
+    margin: 20px;
+}
+
+
+@media(max-width:1200px){
+    .three_sheet{
+        grid-template-columns: 1fr 1fr;
+        width: 90%;
+    }
+    .three_sheet .three_img:nth-child(3) {
+        grid-column: span 2;
+    }
+    .sixteen_sheet{
+        width: 90%;
+        grid-template-columns: 1fr 1fr 1fr 1fr ;
+    }
+}
+
+@media(max-width:600px){
+    .item{
+        display: none;
+    }
+    .icon{
+        display: block;
+    }
+    .three_img {
+        grid-column: span 2;
+    }
+    .sixteen_img{
+        grid-column: span 4;
+    }
+}
